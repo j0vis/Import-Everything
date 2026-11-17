@@ -1,0 +1,21 @@
+# Local development credentials — never committed (see AGENTS.md, "Local test environment")
+LOCAL-DEV.md
+
+# Development-only files, kept on disk but not published: the repository carries the plugin alone
+AGENTS.md
+memory.md
+checks/
+
+# Agent scratch: probe scripts, fixtures, backups, logs, zips and temp dirs
+.freebuff/
+.cloud-attachments/
+
+# Work screenshots and other local captures
+/*.png
+
+# Editors and OS cruft
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<adtools>
+  <entry id="video-101" name="A day on the coast">
+    <adtoolid>101</adtoolid><title>A day on the coast</title>
+    <description><![CDATA[<p>A short film about the coastline & its wildlife.</p>]]></description>
+    <url>https://example.com/videos/coast.mp4</url><thumbnail>https://example.com/images/coast.jpg</thumbnail>
+    <clip_url>https://example.com/videos/coast/</clip_url><screen_url>https://example.com/images/coast/</screen_url>
+    <published_date>1760000000</published_date><video_length>240</video_length><video_size>12000000</video_size><video_ext>mp4</video_ext>
+    <tags>nature,coast,travel</tags><model>Alex</model><site_name>Example Studio</site_name>
+    <clips><clip><duration>240</duration><width>1920</width><height>1080</height>
+      <flv>coast_1920x1080.mp4</flv>
+      <screens><screen>coast_xl.jpg</screen><screen>coast_x.jpg</screen></screens>
+    </clip></clips>
+    <item id="ids"><programid>1</programid><siteid>6</siteid><tourid>29</tourid></item>
+    <item id="ident_details"><name>Coastal program</name><url>https://example.com/tour</url></item>
+  </entry>
+  <entry id="video-102" name="Mountain morning">
+    <adtoolid>102</adtoolid><title>Mountain morning</title><description>Sunrise above the hills.</description>
+    <url>https://example.com/videos/mountain.mp4</url><thumbnail>https://example.com/images/mountain.jpg</thumbnail>
+    <clip_url>https://example.com/videos/mountain/</clip_url><screen_url>https://example.com/images/mountain/</screen_url>
+    <video_length>180</video_length><director>Sam</director><tags>nature,mountains</tags>
+    <clips><clip><duration>180</duration><width>1280</width><height>720</height>
+      <flv>mountain_1280x720.mp4</flv>
+      <screens><screen>mountain_xl.jpg</screen><screen>mountain_x.jpg</screen></screens>
+    </clip></clips>
+    <item id="ids"><programid>1</programid><siteid>6</siteid><tourid>29</tourid></item>
+    <item id="ident_details"><name>Mountain program</name></item>
+  </entry>
+</adtools>

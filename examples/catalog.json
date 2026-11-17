@@ -1,0 +1,40 @@
+{
+  "catalog": {
+    "updated": "2026-01-15",
+    "item": [
+      {
+        "id": "j-1001",
+        "title": "Harbor at dawn",
+        "summary": "A short film about a working harbor waking up.",
+        "image": "https://cdn.example.com/catalog/harbor-at-dawn.jpg",
+        "video": "https://cdn.example.com/catalog/harbor-at-dawn.mp4",
+        "duration": 412,
+        "model_name": "A. Nash",
+        "site_name": "Example Studio",
+        "tags": ["harbor", "dawn"]
+      },
+      {
+        "id": "j-1002",
+        "title": "Market day",
+        "summary": "Stalls, rain, and one very patient dog.",
+        "image": "https://cdn.example.com/catalog/market-day.jpg",
+        "video": "https://cdn.example.com/catalog/market-day.mp4",
+        "duration": 268,
+        "model_name": "R. Ellis",
+        "site_name": "Example Studio",
+        "tags": ["market", "rain"]
+      },
+      {
+        "id": "j-1003",
+        "title": "Night train",
+        "summary": "A sleeper carriage crosses three borders.",
+        "image": "https://cdn.example.com/catalog/night-train.jpg",
+        "video": "https://cdn.example.com/catalog/night-train.mp4",
+        "duration": 533,
+        "model_name": "M. Okoro",
+        "site_name": "Example Studio",
+        "tags": ["train", "night"]
+      }
+    ]
+  }
+}

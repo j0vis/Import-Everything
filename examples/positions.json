@@ -1,0 +1,20 @@
+{
+  "records": [
+    {
+      "id": "pos-1",
+      "title": "Coastal light",
+      "description": "A short film about the coastline.",
+      "note": ["first note", "second note"],
+      "note#2": "literal key",
+      "tags": ["coast", "film"]
+    },
+    {
+      "id": "pos-2",
+      "title": "Harbour at dawn",
+      "description": "Boats leaving the harbour.",
+      "note": ["first note", "second note"],
+      "note#2": "literal key",
+      "tags": ["harbour"]
+    }
+  ]
+}

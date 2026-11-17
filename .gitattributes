@@ -1,0 +1,5 @@
+# Source is authored with LF; keep the repository and every worktree on LF.
+* text=auto eol=lf
+
+# Built distribution artifact must be stored byte-for-byte.
+*.zip binary -text

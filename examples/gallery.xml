@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns:media="https://example.com/media">
+  <gallery id="gallery-201"><title>Botanical collection</title><description><![CDATA[<p>A walk through the greenhouse.</p>]]></description><url>https://example.com/galleries/botanical</url><thumbnail>https://example.com/images/botanical.jpg</thumbnail><model>Jamie</model><photos><photo id="p1"><url>https://example.com/images/leaf.jpg</url><caption>Green leaves</caption></photo><photo id="p2"><url>https://example.com/images/flower.jpg</url><caption>Spring flowers</caption></photo></photos><media:credit>Example Photography</media:credit></gallery>
+  <gallery id="gallery-202"><title>City at dusk</title><description>Evening light in the city.</description><url>https://example.com/galleries/city</url><thumbnail>https://example.com/images/city.jpg</thumbnail><photos><photo id="p3"><url>https://example.com/images/city.jpg</url><caption>City lights</caption></photo></photos><license>CC BY 4.0</license></gallery>
+</feed>
