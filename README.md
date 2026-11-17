@@ -94,6 +94,3 @@ code are right.
 ## License
 
 [GPL-2.0-or-later](LICENSE.txt).
-
-This is independent, original work: no third-party importer code, branding, libraries or add-ons are included or
-required.
