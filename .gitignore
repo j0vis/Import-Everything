@@ -14,10 +14,8 @@ checks/
 /dist/
 *.zip
 
-# Work screenshots and other local captures; only the images README.md shows are published
+# Work screenshots and other local captures
 /*.png
-!/saved-feeds-check.png
-!/docs-page-top.png
 
 # Editors and OS cruft
 .DS_Store

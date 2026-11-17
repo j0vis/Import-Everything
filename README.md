@@ -4,8 +4,6 @@ An independent, original importer for everything a source can hand you — XML, 
 Google Sheets — into WordPress posts, pages, image attachments and custom post types, in one three-step visual
 workflow.
 
-![The Saved feeds tab: each saved feed with its last run, its next scheduled run, and the post status its runs import with](saved-feeds-check.png)
-
 ## What it does
 
 - **One wizard, three steps.** Add a source (an uploaded file or a public URL), map the fields it discovered,
@@ -33,8 +31,6 @@ workflow.
   and journal into a JSON file you can attach to a support request.
 - **Documentation inside the plugin**, linked from its own sidebar entry and readable on a site with no internet
   access.
-
-![The plugin's own Documentation page, linked under Import Everything! in the admin menu](docs-page-top.png)
 
 ## Requirements
 
