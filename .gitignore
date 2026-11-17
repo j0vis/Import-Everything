@@ -10,8 +10,10 @@ checks/
 .freebuff/
 .cloud-attachments/
 
-# Work screenshots and other local captures
+# Work screenshots and other local captures; only the images README.md shows are published
 /*.png
+!/saved-feeds-check.png
+!/docs-page-top.png
 
 # Editors and OS cruft
 .DS_Store
