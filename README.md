@@ -46,13 +46,14 @@ workflow.
 
 ## Installation
 
-1. Download [`dist/import-everything.zip`](dist/import-everything.zip), or build it from a checkout (see below).
-2. In WordPress, go to **Plugins → Add Plugin → Upload Plugin**, choose the zip, install it, and activate it.
+1. Copy the plugin into `wp-content/plugins/import-everything/` — WordPress identifies a plugin by its folder, so
+   keep that name — or zip that folder and upload the zip under **Plugins → Add Plugin → Upload Plugin**.
+2. Activate **Import Everything!** on the Plugins screen.
 3. Open **Import Everything!** in the admin menu.
 
-To install from a checkout instead, copy the files into `wp-content/plugins/import-everything/` — WordPress
-identifies a plugin by its folder, so keep that name — and activate it from the Plugins screen. To rebuild the
-zip from a checkout, the shipped file's contents go into a single top-level `import-everything/` folder.
+To build the installable zip yourself, put the plugin files in a single top-level `import-everything/` folder and
+archive it as `import-everything.zip`; nothing needs to be compiled or downloaded first, and no Node.js or
+Composer dependencies are involved.
 
 ## Using it
 

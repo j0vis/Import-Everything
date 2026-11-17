@@ -10,6 +10,10 @@ checks/
 .freebuff/
 .cloud-attachments/
 
+# Built distribution zips are not part of the repository
+/dist/
+*.zip
+
 # Work screenshots and other local captures; only the images README.md shows are published
 /*.png
 !/saved-feeds-check.png
