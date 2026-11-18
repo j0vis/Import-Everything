@@ -1047,6 +1047,20 @@
     state.info = sprintf(t('Saved feed "%s". Opening or running it restores this mapping.'), saved.feed.name);
   }
   /** @param {IexFeed} feed */
+  /**
+   * Enter the preview step, storing the feed first.
+   *
+   * Preview used to be one click from the mapping step with nothing saved, so a feed that was previewed and
+   * imported never reached Saved feeds and could not be scheduled, edited or run again afterwards. Continuing
+   * now saves the feed exactly as the Save feed button does, so the mapping that reaches preview is one the site
+   * keeps; a mapping the server refuses stops here with its own message instead of importing and then being lost.
+   */
+  async function openPreview() {
+    await saveFeed();
+    state.preview = null;
+    state.confirmed = false;
+    state.step = 3;
+  }
   function openFeed(feed) {
     work(async () => applyLoaded(await request('feed_open', { feed: feed.id }), feed));
   }
@@ -1271,6 +1285,7 @@
     return node('div', { class: 'iex-card' }, node('div', { class: 'iex-card-heading' }, node('h2', {}, t('Save this feed'))),
       text(hint, 'iex-hint'),
       field(t('Feed name'), nameInput),
+      text(t('Continuing to preview saves this feed too, so it can be scheduled or edited later.'), 'iex-hint'),
       button(state.feedId ? t('Update saved feed') : t('Save feed'), () => work(saveFeed), 'primary'));
   }
   /** @param {string} name @param {unknown} value */
@@ -1500,7 +1515,7 @@
         download('import-everything-mapping.json', { format: 'import-everything', version: 1, settings });
       }), button(t('Load mapping'), () => templateInput.click()), templateInput));
     return node('section', {}, top, node('div', { class: 'iex-mapping-grid' }, node('div', {}, card, custom), fieldBrowser()), publishView(), saveFeedView(),
-      node('div', { class: 'iex-footer' }, button(t('← Source'), () => { state.step = 1; render(); }), button(t('Continue to preview →'), () => { state.step = 3; render(); }, 'primary')));
+      node('div', { class: 'iex-footer' }, button(t('← Source'), () => { state.step = 1; render(); }), button(t('Continue to preview →'), () => work(openPreview), 'primary')));
   }
 
   /** The largest batch size this build accepts, from the server's own ceiling. */
@@ -1801,7 +1816,7 @@
         type: 'button', class: `iex-step ${state.step === index + 1 ? 'is-active' : ''}`,
         'aria-current': state.step === index + 1 ? 'step' : null,
         disabled: state.busy || state.running || (!!state.job && index !== 2 && index !== 1) || (!state.source && index > 0),
-        onclick: () => { state.step = index + 1; state.error = ''; render(); }
+        onclick: () => { if (index === 2 && state.step !== 3) { state.error = ''; work(openPreview); return; } state.step = index + 1; state.error = ''; render(); }
       }, node('span', { class: 'iex-step-number' }, index + 1), label)));
       root.append(steps);
       if (state.source && state.step > 1) {

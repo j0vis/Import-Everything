@@ -66,7 +66,8 @@ script and nothing to compile — a release simply attaches an archive of the sa
    import; the run can be paused, and it can be resumed from **Recent imports** after you close the tab.
 
 **Save feed** on the mapping step stores the mapping with the feed, so it can be run again by hand or on a
-schedule (`off`, hourly, twice daily or daily), and its status is stored with it. **Download support report**
+schedule (`off`, hourly, twice daily or daily), and its status is stored with it. **Continue to preview** saves it
+too — a feed that reaches the preview step is always in Saved feeds, ready to schedule or edit. **Download support report**
 appears once a feed is analyzed.
 
 ## Documentation and limits
