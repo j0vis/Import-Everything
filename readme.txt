@@ -4,7 +4,7 @@ Tags: xml, import, csv, json, google-sheets
 Requires at least: 6.4
 Tested up to: 7.1
 Requires PHP: 8.1
-Stable tag: 1.3.1
+Stable tag: 1.3.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -107,6 +107,9 @@ A repeated-array custom field contains strings, not downloaded media IDs. Namesp
 * Saved feeds and schedules: when the latest run of a saved feed failed, opening the plugin screen says so at the top — naming the feed, when it failed and what the server said, with a button that opens Saved feeds — so a background failure is not something you have to go looking for. The Saved feeds list shows where each feed got to (its last run and result, including a failure message), when it runs next, and which post status its runs import with — Imports as drafts, pending review or published — so a feed's destination is visible without opening it. A scheduled or manual run reads a URL feed's document once more and checks the saved mapping against it before starting — the same check Save changes runs on a new address — so a feed that dropped a mapped field records one clear failure naming the feed and the field, starts no import and spools nothing, instead of importing nothing per record. An uploaded file's compressed copy is stored per administrator and can be deleted with its feed. The post status is chosen on the mapping step beside Save feed — and again on the preview step beside Import — and is stored with the saved feed, so its runs, scheduled ones included, import with the same status instead of always starting as a draft. Scheduled runs use WP-Cron, so they happen on page loads or when a system cron calls wp-cron.php; a scheduled run is not a live stream. A run that is paused, or still has records left, holds its feed's schedule until it finishes or its private session expires (one day). A pass is also bounded by your server's own `max_execution_time` — when that limit is under four minutes, the pass hands the remaining records to a follow-up event rather than being killed part-way through — and if a pass is killed anyway, the next scheduled run resumes that session from the record it reached; only when that session can no longer be read does the feed record a failed result explaining it and start fresh on its next schedule. Delete posts is permanent (not a trash), removes a featured image that the importer downloaded for the post, and cannot remove posts you lack permission to delete, which are reported. Posts imported by an earlier release are not linked to a feed until they are imported again.
 
 == Changelog ==
+
+= 1.3.2 =
+The plugin is no longer packed by a separate build step: the folder in the repository is the plugin, and the release archive is an archive of that same folder, so nothing decides what ships apart from the plugin itself. Installing is copying or cloning the folder into `wp-content/plugins/import-everything/`, or uploading the release zip. No plugin behaviour changed, so there is nothing to migrate.
 
 = 1.3.1 =
 The 1.3.0 archive was built without one of the plugin's own include files, so activating it stopped with a fatal error before the plugin could load and no setting, post or saved feed was touched. The plugin folder is now self-contained: every file the plugin requires sits beside the main file, in the repository and in the release archive alike, and there is no packaging step to run or get wrong. Copying or cloning the folder into `wp-content/plugins/import-everything/`, or uploading the release zip, gives WordPress a complete plugin. No plugin behaviour changed, so there is nothing to migrate and no stored data to repair.
