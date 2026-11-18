@@ -47,11 +47,10 @@ workflow.
 2. Activate **Import Everything!** on the Plugins screen.
 3. Open **Import Everything!** in the admin menu.
 
-To build the installable zip yourself, run `php build-zip.php` from the repository root: it writes
-`dist/import-everything.zip` with a single top-level `import-everything/` folder and checks that every file the
-plugin requires is in the archive, failing instead of producing an incomplete zip. Nothing needs to be compiled or
-downloaded first, and no Node.js or Composer dependencies are involved; zipping the files by hand under the same
-layout works too.
+The repository is the plugin: every file it loads sits beside `import-everything.php`, so cloning or downloading
+this folder into `wp-content/plugins/import-everything/` is a complete install. There is no build step, no packaging
+script and nothing to compile — a release simply attaches an archive of the same folder, which you can upload under
+**Plugins → Add Plugin → Upload Plugin**.
 
 ## Using it
 
