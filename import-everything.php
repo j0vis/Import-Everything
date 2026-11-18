@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Import Everything!
  * Description: Import anything into WordPress: XML, RSS, Atom, JSON, CSV and Google Sheets feeds, NATS datatools, posts and custom fields, through one visual mapper and resumable imports.
- * Version: 1.3.0
+ * Version: 1.3.1
  * Requires at least: 6.4
  * Requires PHP: 8.1
  * Author: Import Everything!
