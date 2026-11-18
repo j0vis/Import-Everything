@@ -47,9 +47,11 @@ workflow.
 2. Activate **Import Everything!** on the Plugins screen.
 3. Open **Import Everything!** in the admin menu.
 
-To build the installable zip yourself, put the plugin files in a single top-level `import-everything/` folder and
-archive it as `import-everything.zip`; nothing needs to be compiled or downloaded first, and no Node.js or
-Composer dependencies are involved.
+To build the installable zip yourself, run `php build-zip.php` from the repository root: it writes
+`dist/import-everything.zip` with a single top-level `import-everything/` folder and checks that every file the
+plugin requires is in the archive, failing instead of producing an incomplete zip. Nothing needs to be compiled or
+downloaded first, and no Node.js or Composer dependencies are involved; zipping the files by hand under the same
+layout works too.
 
 ## Using it
 
